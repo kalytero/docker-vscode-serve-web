@@ -33,5 +33,6 @@ sed 's/^\%sudo/\%sudo   ALL=(ALL:ALL) NOPASSWD:ALL/g' -i /etc/sudoers
 EOR
 
 USER code
+WORKDIR /home/code
 
-CMD  ["code", "serve-web", "--without-connection-token"]
+CMD ["code", "serve-web", "--without-connection-token", "--accept-server-license-terms", "--host", "0.0.0.0", "--port", "80"]
