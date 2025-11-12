@@ -1,4 +1,4 @@
-FROM debian:bookworm
+FROM ubuntu:noble
 
 RUN <<EOR
 apt-get update
